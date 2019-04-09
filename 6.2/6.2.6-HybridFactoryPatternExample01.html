@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6.2.6 寄生构造函数模式 2</title>
+	<script type="text/javascript">
+		function Person(name, age, job) {
+            var o = new Object();
+            o.name = name;
+            o.age = age;
+            o.job = job;
+            o.sayName = function() {
+                alert(this.name);
+            }
+            return o;
+        }
+
+        var friend = new Person('Jack', 30, 'Front-end Developer');
+        friend.sayName();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
