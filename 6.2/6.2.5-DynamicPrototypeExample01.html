@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6.2.5 动态原型模式</title>
+	<script type="text/javascript">
+		function Person(name, sex, age) {
+			this.name = name;
+			this.sex = sex;
+			this.age = age;
+
+			//还可以使用 instanceof 操作符确定它的类型。
+			if (typeof this.sayName != "function") {
+				Person.prototype.sayName = function() {
+					alert(this.name);
+				}
+			}
+		}
+
+		var friend = new Person("Jack", "男", 20);
+		friend.sayName();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
