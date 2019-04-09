@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6.2.2 构造函数模式 - 将构造函数当作函数</title>
+	<script type="text/javascript">
+		function Person(name, age, job) {
+            this.name = name;
+            this.age = age;
+            this.job = job;
+            this.sayName = function() {
+                console.log(this.name);
+            }
+        }
+
+        //当作构造函数使用
+        var person = new Person('Jack', 34, 'Front-end Developer');
+        person.sayName();
+
+        //当作普通函数使用
+        Person('Rain', 25, 'Backend Developer');
+        window.sayName();
+
+        //在另一个函数的作用域中调用
+        var o = new Object();
+        Person.call(o,'Kally', 21, 'Designer');
+        o.sayName();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

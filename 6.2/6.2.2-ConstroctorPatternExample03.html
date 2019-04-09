@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6.2.2 构造函数模式 - 将构造函数当作函数2 优化构造函数</title>
+	<script type="text/javascript">
+		function Person(name, age, job) {
+            this.name = name;
+            this.age = age;
+            this.job = job;
+            this.sayName = sayName;
+        }
+
+        function sayName() {
+            console.log(this.name);
+        }
+
+        var person1 = new Person('Jack', 34, 'Front-end Developer');
+        var person2 = new Person('Rain', 25, 'Backend Developer');
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
