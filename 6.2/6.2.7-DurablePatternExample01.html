@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6.2.6 寄生构造函数模式 2</title>
+	<script type="text/javascript">
+		function Person(name, age, job) {
+            // 创建要返回的对象
+            var o = new Object();
+
+            // 可以在这里创建私有变量和函数
+
+            // 添加方法
+            o.sayName = function() {
+                alert(name);
+            }
+
+            // 返回对象
+            return o;
+        }
+
+        var friend = new Person('Jack', 30, 'Front-end Developer');
+        friend.sayName();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
