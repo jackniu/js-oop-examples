@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6.2.3 原型模式 7 Object.keys</title>
+    <script type="text/javascript">
+        function Person() {            
+        }
+
+        Person.prototype.name = 'Jack';
+        Person.prototype.age = 34;
+        Person.prototype.job = 'Front-end Developer';
+        Person.prototype.sayName = function() {
+            console.log(this.name);
+        }
+
+        var keys = Object.keys(Person.prototype);
+        console.log(keys);
+
+        var p1 = new Person();
+        p1.name = 'Rain';
+        p1.age = 25;
+        var p1keys = Object.keys(p1);
+        console.log(p1keys);
+        
+        var keys = Object.getOwnPropertyNames(Person.prototype);
+        console.log(keys);
+        
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

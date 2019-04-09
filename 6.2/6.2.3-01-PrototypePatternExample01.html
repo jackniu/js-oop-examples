@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6.2.3 原型模式</title>
+	<script type="text/javascript">
+		function Person() {            
+        }
+
+        Person.prototype.name = 'Jack';
+        Person.prototype.age = 34;
+        Person.prototype.job = 'Front-end Developer';
+        Person.prototype.sayName = function() {
+            console.log(this.name);
+        }
+        var person1 = new Person();
+        person1.sayName();
+        var person2 = new Person();
+        person2.sayName();
+
+        console.log(person1.sayName == person2.sayName);
+
+        console.log(Person.prototype.isPrototypeOf(person1));
+        console.log(Person.prototype.isPrototypeOf(person2));      
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
