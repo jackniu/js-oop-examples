@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>OOP 05 属性类型 - 数据属性 configurable 2</title>
+	<script type="text/javascript">
+		var person = {};
+
+		Object.defineProperty(person, "name",{
+			writable: false,
+			value: "Long Ma"
+		});
+
+		//可以多次调用Object.defineProperty()方法修改同一个属性，但在把configurable特性设置为false 之后就会有限制了。
+		Object.defineProperty(person, "name",{
+			writable: true,
+			value: "Long Ma"
+		});
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

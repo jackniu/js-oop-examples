@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>OOP 04 属性类型 - 数据属性 configurable</title>
+	<script type="text/javascript">
+		var person = {};
+		Object.defineProperty(person, "name",{
+			configurable: false,
+			value: "Longma"
+		});
+
+		alert(person.name);
+		delete person.name;
+		alert(person.name);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
